@@ -1,0 +1,4 @@
+URxvt.background: [90]#000000
+URxvt.foreground : #aaaaaa
+
+URxvt.font : xft:ubuntu mono:pixelsize=16
