@@ -1,0 +1,11 @@
+URxvt.background: [90]#000000
+URxvt.foreground: #ffffff
+
+URxvt.font:     xft:Monospace:pixelsize=14
+URxvt.boldFont: xft:Monospace:pixelsize=14
+
+URxvt.letterspace: -1
+URxvt.allow_bold: true
+URxvt.geometry: 120x70
+
+URxvt.scrollBar:false
