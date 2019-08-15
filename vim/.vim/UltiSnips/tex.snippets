@@ -1,0 +1,164 @@
+# Standard document layout for desktop papers and articles.
+snippet desktop "Default document layout for most documents..."
+\documentclass{article}
+\usepackage[margin=0.7in]{geometry}
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\title{$1}
+\author{Ismael Khan}
+\date{}
+
+\pagecolor{$2}
+\color{$3}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}
+
+\begin{document}
+$4
+\end{document}
+endsnippet
+# Standard document article layout for viewing on mobile. 
+# Generally used for course-notes, papers etc.
+snippet mobile "Default document layout for most documents..."
+\documentclass[a6paper]{article}
+\usepackage[margin=5mm]{geometry}
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\title{$1}
+\author{Ismael Khan}
+\date{}
+
+\pagecolor{$2}
+\color{$3}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\begin{document}
+$4
+\end{document}
+endsnippet
+# Snippets dedicated to shorthands for specific environemts of the document
+snippet sec "Section Environment"
+\section{$1}
+$2
+endsnippet
+
+snippet sub "Subsection Environment"
+\subsection{$1}
+$2
+endsnippet
+
+snippet subsub "Subsubsection Environment"
+\subsubsection{$1}
+$2
+endsnippet
+
+snippet sec* "Section without number label"
+\section*{$1}
+$2
+endsnippet
+
+snippet sub* "Subsection without number label"
+\subsection*{$1}
+$2
+endsnippet
+
+snippet subsub* "Subsubsection without number label"
+\subsubsection*{$1}
+$2
+endsnippet
+
+snippet ex "Example Environment"
+\begin{example}
+$1
+\end{example}
+endsnippet
+
+snippet the "Theorem Environment"
+\begin{theorem}
+$1
+\end{theorem}
+endsnippet
+
+snippet proof "Proof Environment"
+\begin{proof}
+$1
+\end{proof}
+endsnippet
+
+snippet lem "Lemma Environment"
+\begin{lemma}
+$1
+\end{lemma}
+endsnippet
+
+snippet rem "Remark Environment"
+\begin{remark}
+$1
+\end{remark}
+endsnippet
+
+snippet def "Definition Environment"
+\begin{definition}
+$1
+\end{definition}
+endsnippet
+
+# Mathematics typesetting shorthands
+snippet mm "mathmode"
+$ $1 $
+endsnippet
+
+snippet MM "Display mode"
+$$ $1 $$
+endsnippet
+
+snippet f "Fraction in math mode"
+\frac{$1}{$2}
+endsnippet
+
+
+snippet i "Indefinite Integral"
+\int $1 \; d$2
+endsnippet
+
+snippet di "Definite Integral"
+\int_$1^$2  $3 \; d$4
+endsnippet
+
+snippet l "Display-style limit (so that we dont get the ugly limit style inline"
+\displaystyle \lim_{$1 \to $2} $3
+endsnippet
+
+snippet s "Display-style sum"
+\displaystyle \sum_{$1}^{$2} $3
+endsnippet
+
+snippet al* "align with no label"
+\begin{align*}
+$1
+\end{align*}
+endsnippet
