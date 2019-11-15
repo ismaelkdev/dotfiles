@@ -6,12 +6,11 @@
 # There are still key features missing and this is for a pure setup with no
 # initial installation.
 
-sudo apt install vim python-pip3 python-pip texlive-full i3 wine lutris git feh
-ranger xfonts-terminus compton conky rofi
+sudo apt install vim python3-pip python-pip texlive-full i3 git feh ranger compton conky rofi curl
 
 # Installation of Vim-Plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Cloning the .vimrc file to ~/
 cp .vimrc ~/.vimrc
@@ -20,26 +19,22 @@ cp .vimrc ~/.vimrc
 vim -c "PlugInstall | q | q"
 
 #i3-gaps dependencies for Ubuntu
-sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev
-libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev
-libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev
-libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev
-libtool libxcb-shape0-dev
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool libxcb-shape0-dev
 
 # Cloning i3-gaps fork with rounded edges 
-git clone https://www.github.com/resloved/i3 i3-gaps
-cd i3-gaps
-git checkout gaps && git pull
+git clone https://github.com/resloved/i3.git
+cd i3/
 autoreconf --force --install
-mkdir build
-cd build
-../configure --prefix=/usr --sysconfdir=/etc
+rm -rf build/
+mkdir -p build && cd build/
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
-rm -rf build
 # Brings back to dotfiles/
 cd ..
+rm -rf ./build
 cd ..
+rm -rf ./i3
 
 mkdir ~/.config/i3
 cp config ~/.config/i3/config
@@ -47,10 +42,7 @@ cp config ~/.config/i3/config
 cp wallpaper.png ~/Downloads
 
 # Extra fun stuff for i3.
-sudo apt-get install wget ranger mediainfo highlight tmux calcurse  newsbeuter
-moc qutebrowser imagemagick transmission-cli atool xcompmgr blender pinta gimp
-markdown mupdf evince audacity vim-latexsuite rsync syncthing cups screenfetch
-scrot unzip unrar biber ntfs-3g deepin-terminal zip irssi unzip 
+sudo apt-get install wget ranger mediainfo highlight tmux calcurse  newsbeuter moc qutebrowser imagemagick transmission-cli atool xcompmgr blender pinta gimp markdown mupdf evince audacity vim-latexsuite rsync syncthing cups screenfetch scrot unzip unrar biber ntfs-3g deepin-terminal zip irssi unzip 
 
 # Copy compton config file to .config
 cp compton.conf ~/.config/compton.conf
