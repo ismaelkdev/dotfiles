@@ -36,6 +36,18 @@ rm -rf ./build
 cd ..
 rm -rf ./i3
 
+## Installation of Polybar ##
+wget https://github.com/polybar/polybar/releases/download/3.4.1/polybar-3.4.1.tar
+tar -xvf polybar-3.4.1.tar
+cd polybar
+# Necessary dependencies
+sudo apt install cmake cairo-perf-utils xcb xcb-proto libxcb-composite0-dev
+python-xcbgen libxcb-ewmh-dev
+
+# Build and Install (
+./build.sh
+
+
 mkdir ~/.config/i3
 cp config ~/.config/i3/config
 
