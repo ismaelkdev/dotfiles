@@ -36,6 +36,14 @@ rm -rf ./build
 cd ..
 rm -rf ./i3
 
+mkdir ~/st
+cp ./st ~/ -r
+
+# Compile and build st
+cd ~/st
+make
+sudo make install
+
 ## Installation of Polybar ##
 wget https://github.com/polybar/polybar/releases/download/3.4.1/polybar-3.4.1.tar
 tar -xvf polybar-3.4.1.tar
@@ -60,13 +68,6 @@ sudo apt-get install wget ranger mediainfo highlight tmux calcurse  newsbeuter m
 cp compton.conf ~/.config/compton.conf
 
 # Clone local configuration of st to ~
-mkdir ~/st
-cp ./st ~/ -r
-
-# Compile and build st
-cd ~/st
-make
-sudo make install
 
 # Installing Discord!
 sudo snap install discord

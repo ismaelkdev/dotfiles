@@ -5,7 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Terminus:pixelsize=14:antialias=true:autohint=true";
+// Old AMI BIOS Font for te ~aesthetic~
+// static char *font = "PX437 AMI BIOS:pixelsize=13:antialias=true:autohint=true";
+// Menlo (monospace font used on modern MACOS, looks pretty nice.
+static char *font = "Menlo:pixelsize=13:antialias=true:autohint=true";
+
 static int borderpx = 2;
 
 /*
