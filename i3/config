@@ -264,7 +264,7 @@ for_window [class="Spotify"] move to workspace Spotify
 exec spotify
 
 exec --no-startup-id chromium
-exec_always --no-startup-id ~/.config/compton/compton.sh
+exec_always --no-startup-id ~/.config/compton.sh
 
 # Initiating Syncthing on startup
 exec --no-startup-id systemctl --user start syncthing
