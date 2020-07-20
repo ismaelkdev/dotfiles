@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Complex
+# key: cp
+# --
+\mathbb{C}^{$1}

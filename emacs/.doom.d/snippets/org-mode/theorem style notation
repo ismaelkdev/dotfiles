@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: theorem style notation
+# key: bt
+# --
+\begin{thm}{$1}
+$2
+\end{thm}

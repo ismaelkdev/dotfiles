@@ -1,0 +1,4 @@
+# key: bi
+# name: bold italic
+# --
+\textbf{\textit{$1}}

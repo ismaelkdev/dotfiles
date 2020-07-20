@@ -1,0 +1,5 @@
+# key: mb
+# name: mathbb
+# uuid: latex
+# --
+\mathbb{$1}

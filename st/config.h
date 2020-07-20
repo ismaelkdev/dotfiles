@@ -8,7 +8,8 @@
 // Old AMI BIOS Font for te ~aesthetic~
 // static char *font = "PX437 AMI BIOS:pixelsize=13:antialias=true:autohint=true";
 // Menlo (monospace font used on modern MACOS, looks pretty nice.
-// static char *font = "Menlo:pixelsize=13:antialias=true:autohint=true";
+//static char *font = "Menlo:pixelsize=13:antialias=true:autohint=true";
+//static char *font = "Fira Code:pixelsize=11;antialias=true:autohint=true;
 static char *font = "Terminus:pixelsize=13;antialias=true:autohint=true";
 static int borderpx = 2;
 
@@ -478,3 +479,5 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
+

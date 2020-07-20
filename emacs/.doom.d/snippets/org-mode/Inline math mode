@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Inline math mode
+# key: m
+# --
+\\($1\\)

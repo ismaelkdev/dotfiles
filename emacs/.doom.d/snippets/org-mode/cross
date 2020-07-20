@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cross
+# key: cx
+# --
+$1 \times $2

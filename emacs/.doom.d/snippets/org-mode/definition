@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: definition
+# key: def
+# --
+\defn{$1}
