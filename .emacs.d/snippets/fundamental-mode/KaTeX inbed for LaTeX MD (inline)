@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: KaTeX inbed for LaTeX MD (inline)
+# key: mk
+# --
+{{<katex>}}
+$1
+{{</katex>}}

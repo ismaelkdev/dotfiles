@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Blackboard Bold
+# key: mb
+# --
+\mathbb{$1}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Theorem environemnt (under theorem)
+# key: the
+# --
+\begin{theorem}
+$1
+\end{theorem}

@@ -1,0 +1,4 @@
+# key: mm
+# name: Inline Math Mode
+# --
+\\($1\\)
