@@ -43,7 +43,8 @@ floating_modifier $mod
 bindsym $mod+Return exec st
 bindsym $mod+Shift+Return exec emacs
 bindsym $mod+Ctrl+Return exec  st -c float
-for_window [class="^float"] floating enable
+for_window [class="^float"] floating enable resize set 850 900
+for_window [class="^float"] move position center
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -75,6 +76,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+bindsym $mod+z exec st -c float -e vim ~/i3-used-keybinds/i3keybinds.py
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -103,7 +105,7 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
+bindsym $mod+b exec ~/i3-layout-manager/layout_manager.sh
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -120,7 +122,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 set $ws11 "Chat"
-set $ws12 "Music"
+set $ws12 "~"
 
 
 # switch to workspace
@@ -160,8 +162,8 @@ bindsym $mod+Shift+e exec ~/.config/rofi/rofi-logout.sh
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
+        #
+        # pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
@@ -183,7 +185,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+c exec --no-startup-id brave-browser
 
 bindsym $mod+p exec passmenu
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -203,8 +205,7 @@ hide_edge_borders both
 client.focused #f59e42 #000000 #ffffff #f59e42 #f59e42
 # Wallpaper Selection through feh. If default black is wanted then just have
 # all of them commented out.
-exec feh --bg-fill ~/wp/Cityscapes/1505759278762.jpg ~/wp/Cityscapes/1505734811063.jpg
-
+exec feh --bg-scale ~/wal3.png
 ## POLYBAR EXCUTION ##
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -215,8 +216,9 @@ exec xrandr --output HDMI-1 --left-of eDP-1
 
 bindsym $mod+Shift+s exec systemctl suspend
 #bindsym $mod+t move workspace to output up
-bindsym $mod+t move workspace to output left
-
+#bindsym $mod+t move workspace to output left
+bindsym $mod+t exec ~/hideIt.sh --name "polybar-astartes_HDMI-0" -d top -H
+bindsym $mod+x exec ~/.config/rofi/configs.sh
 #exec --no-startup-id discord
 
 #exec --no- startup-id spotify
@@ -231,10 +233,10 @@ for_window [class="Blueman-manager"] floating enable resize shrink height 20pt
 for_window [class="Steam"] floating enable resize shrink height 10pt
 for_window [class="minecraft-launcher"] floating enable resize shrink height 20pt
 for_window [class="Wine"] floating enable resize shrink height 20pt
-
-## i3-gaps SETTINGS - [redundant as of current time] ##
-#gaps outer 20
-#gaps inner 20
+for_window [class="feh"] floating enable resize shrink height 30pt
+## i3-gaps SETTINGS ##
+gaps outer 20
+gaps inner 20
 
 # class                 border  backgr. text    indicator child_border
 #
@@ -250,15 +252,26 @@ assign [class="discord"] Chat
 # puts Discord to a chat workspace.
 exec --no-startup-id discord
 
+# GRAPHICS SETTINGS:
+exec xrandr --output HDMI-0 --mode 1920x1080 --rate 144
 # Spotify has no class name on startup so assigning a workspace wont work,
 # instead we have to make all Spotify instances point to the Spotify "workspace".
 
-exec --no-startup-id chromium
 exec_always --no-startup-id ~/.config/compton/compton.sh
-
+exec_always --no-startup-id ~/.config/conky.sh
 # Initiating Syncthing on startup
 exec --no-startup-id systemctl --user start syncthing
 
 bindsym $mod+Shift+minus move scratchpad
 
 bindsym $mod+minus scratchpad show
+
+# launch home info
+exec i3-msg "workspace ~; append_layout /home/koji/.i3/home.json"
+exec st -t BpyTOP python3 bpytop/bpytop.py
+assign [title="BpyTOP"] ~
+exec st -t ncmpcpp_vis ncmpcpp --screen visualizer
+assign [title="ncmpcpp_vis"] ~
+exec st -t ncmpcpp_gen ncmpcpp
+assign [title="ncmpcpp_gen"] ~
+
