@@ -8,9 +8,13 @@
 // Old AMI BIOS Font for te ~aesthetic~
 // static char *font = "PX437 AMI BIOS:pixelsize=13:antialias=true:autohint=true";
 // Menlo (monospace font used on modern MACOS, looks pretty nice.
-// static char *font = "Menlo:pixelsize=13:antialias=true:autohint=true";
-static char *font = "Terminus:pixelsize=13;antialias=true:autohint=true";
-static int borderpx = 2;
+//static char *font = "Menlo:pixelsize=11:antialias=true:autohint=true";
+//static char *font = "Ubuntu Mono:pixelsize=15:antialias=true:autohint=true";
+//static char *font = "Fira Code:pixelsize=11;antialias=true:autohint=true;
+//static char *font = "Terminus:pixelsize=13;antialias=true:autohint=true";
+static char *font = "envypn:pixelsize=12;antialias=true;autohint=true";
+// ceebs, ill just do it manually.
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -146,7 +150,7 @@ unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -159,8 +163,8 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+static unsigned int mousefg = 0;
+static unsigned int mousebg = 7;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
@@ -478,3 +482,5 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
+

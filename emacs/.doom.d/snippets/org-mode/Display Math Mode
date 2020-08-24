@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Display Math Mode
+# key: M
+# --
+
+\[
+    $1
+\]

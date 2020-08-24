@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Double Integral
+# key: ii
+# --
+\iint_{$1} $2 \; d$3

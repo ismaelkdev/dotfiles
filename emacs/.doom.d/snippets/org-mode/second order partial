@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: second order partial
+# key: par2
+# --
+\frac{\partial^2{$1}}{\partial{$2}\partial{$3}}

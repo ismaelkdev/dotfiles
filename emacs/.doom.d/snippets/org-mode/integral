@@ -1,0 +1,4 @@
+# key: in
+# name: integral
+# --
+\int_{$1}^{$2} $3 \; d$4

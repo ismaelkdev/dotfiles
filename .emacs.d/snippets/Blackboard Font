@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Blackboard Font
+# uuid: mathbb
+# key: mb
+# --
+\mathbb{$1}
