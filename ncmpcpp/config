@@ -1,0 +1,7 @@
+mpd_crossfade_time = "5"
+
+mpd_host = "localhost"
+mpd_port = "6681"
+
+
+mpd_music_dir = "/home/koji/Music"
