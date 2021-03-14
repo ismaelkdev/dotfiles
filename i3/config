@@ -1,4 +1,4 @@
-# i3 config file (v4) :: koji
+#i3 config file (v4) :: koji
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #         _nnnn_
@@ -40,7 +40,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+Return exec emacs
 bindsym $mod+Ctrl+Return exec  st -c float
 for_window [class="^float"] floating enable resize set 850 900
@@ -52,7 +52,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec rofi -show window
 
-bindsym $mod+Shift+d exec betterlockscreen -l dimblur
+bindsym $mod+Shift+d exec betterlockscreen -l -t "Probably gone for a coffee"
+bindsym $mod+Shift+f exec betterlockscreen -s -l -t "Probably gone for a coffee"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -198,14 +199,13 @@ bindsym $mod+p exec passmenu
 #  }
 #}
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 
 hide_edge_borders both
 
 client.focused #f59e42 #000000 #ffffff #f59e42 #f59e42
 # Wallpaper Selection through feh. If default black is wanted then just have
 # all of them commented out.
-exec feh --bg-scale ~/wal3.png
 ## POLYBAR EXCUTION ##
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -216,8 +216,8 @@ exec xrandr --output HDMI-1 --left-of eDP-1
 
 bindsym $mod+Shift+s exec systemctl suspend
 #bindsym $mod+t move workspace to output up
-#bindsym $mod+t move workspace to output left
-bindsym $mod+t exec ~/hideIt.sh --name "polybar-astartes_HDMI-0" -d top -H
+bindsym $mod+t move workspace to output left
+#bindsym $mod+t exec ~/hideIt.sh --name "polybar-astartes_HDMI-0" -d top -H
 bindsym $mod+x exec ~/.config/rofi/configs.sh
 #exec --no-startup-id discord
 
@@ -235,8 +235,8 @@ for_window [class="minecraft-launcher"] floating enable resize shrink height 20p
 for_window [class="Wine"] floating enable resize shrink height 20pt
 for_window [class="feh"] floating enable resize shrink height 30pt
 ## i3-gaps SETTINGS ##
-gaps outer 20
-gaps inner 20
+# gaps outer 1
+# gaps inner 9
 
 # class                 border  backgr. text    indicator child_border
 #
@@ -253,7 +253,7 @@ assign [class="discord"] Chat
 exec --no-startup-id discord
 
 # GRAPHICS SETTINGS:
-exec xrandr --output HDMI-0 --mode 1920x1080 --rate 144
+# exec xrandr --output HDMI-0 --mode 1920x1080 --rate 144
 # Spotify has no class name on startup so assigning a workspace wont work,
 # instead we have to make all Spotify instances point to the Spotify "workspace".
 
@@ -267,11 +267,12 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # launch home info
-exec i3-msg "workspace ~; append_layout /home/koji/.i3/home.json"
-exec st -t BpyTOP python3 bpytop/bpytop.py
-assign [title="BpyTOP"] ~
-exec st -t ncmpcpp_vis ncmpcpp --screen visualizer
-assign [title="ncmpcpp_vis"] ~
-exec st -t ncmpcpp_gen ncmpcpp
-assign [title="ncmpcpp_gen"] ~
+# exec i3-msg "workspace ~; append_layout /home/koji/.i3/home.json"
+# exec st -t BpyTOP python3 bpytop/bpytop.py
+# assign [title="BpyTOP"] ~
+# exec st -t ncmpcpp_vis ncmpcpp --screen visualizer
+# assign [title="ncmpcpp_vis"] ~
+# exec st -t ncmpcpp_gen ncmpcpp
+# assign [title="ncmpcpp_gen"] ~
 
+exec feh --bg-scale ~/wallpapers/currentwallpaper.*
