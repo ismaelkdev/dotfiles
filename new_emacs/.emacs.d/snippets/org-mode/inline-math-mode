@@ -1,0 +1,4 @@
+# key: mk
+# name: inline-math-mode
+# --
+\\( $1 \\)

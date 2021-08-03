@@ -1,0 +1,23 @@
+#+TITLE: flycheck: Get the computer proof reading
+#+AUTHOR: Aqeel Akber
+
+* flycheck
+=flycheck= is a modern drop in replacement for emacs =flymake=. It's
+faster, more memory efficient, supports more languages, and has a
+great project culture.
+
+I say that this is doing proof reading because you can use linters to
+provide style warnings, as well as whether your code will compile or
+not.
+
+Web: http://www.flycheck.org/en/latest/
+Git: https://github.com/flycheck/flycheck
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck :ensure t
+    :defer t
+    :init
+    (global-flycheck-mode)
+    )
+
+#+END_SRC

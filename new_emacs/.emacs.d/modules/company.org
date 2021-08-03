@@ -1,0 +1,55 @@
+#+TITLE: company: Auto complete anything, anywhere
+#+AUTHOR: Aqeel Akber
+
+* company
+
+Auto completion of everything with nice backends. I want to complete
+everything, everywhere!
+
+Web: http://company-mode.github.io/
+Git: https://github.com/company-mode/company-mode
+Blog: https://aqeelakber.com/2017/01/08/emacs-company-mode/
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company :ensure t
+    :defer t
+    :init
+    (global-company-mode t)
+    :config
+    (setq company-idle-delay 0)
+    (setq company-echo-delay 0)
+    (setq company-minimum-prefix-length 2)
+    )
+#+END_SRC
+
+** Fixing =yasnippet= conflict
+
+Pressing tab with company mode conflicts with =yasnippets=, this is
+the only fix that I found that makes everything work as expected.
+
+#+BEGIN_SRC emacs-lisp
+  (defun check-expansion ()
+    (save-excursion
+      (if (looking-at "\\_>") t
+        (backward-char 1)
+        (if (looking-at "\\.") t
+          (backward-char 1)
+          (if (looking-at "->") t nil)))))
+
+  (defun do-yas-expand ()
+    (let ((yas/fallback-behavior 'return-nil))
+      (yas/expand)))
+
+  (defun tab-indent-or-complete ()
+    (interactive)
+    (if (minibufferp)
+        (minibuffer-complete)
+      (if (or (not yas/minor-mode)
+              (null (do-yas-expand)))
+          (if (check-expansion)
+              (company-complete-common)
+            (indent-for-tab-command)))))
+
+
+  (global-set-key [tab] 'tab-indent-or-complete)
+#+END_SRC

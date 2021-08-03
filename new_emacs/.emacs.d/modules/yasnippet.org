@@ -1,0 +1,19 @@
+#+TITLE: yasnippet: Snippet and be done with it
+#+AUTHOR: Aqeel Akber
+
+* yasnippet
+
+The amount of time spent on dressing my files usually means not doing
+it all, which is even worse for future me.
+
+Web: http://joaotavora.github.io/yasnippet/
+Git: https://github.com/joaotavora/yasnippet
+
+#+BEGIN_SRC emacs-lisp
+  (use-package yasnippet :ensure t
+    :defer t
+    :init
+    (yas-global-mode t)
+    )
+#+END_SRC
+

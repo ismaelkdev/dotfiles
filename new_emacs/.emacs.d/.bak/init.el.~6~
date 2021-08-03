@@ -1,0 +1,91 @@
+;; simplemacs -- Aqeel Akber's Emacs (@AdmiralAkber)
+;; ------------------------------------------------------------------------
+
+(require 'org)
+
+
+;; package: Emacs Package Manager
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/package.org"
+		      user-emacs-directory))
+
+
+;; org: The real reason to use emacs
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/org.org"
+		      user-emacs-directory))
+
+;; aesthetics: My taste
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/aesthetics.org"
+		      user-emacs-directory))
+
+;; notmuch: Email in Emacs
+;; ------------------------------------------------------------------------
+;; (org-babel-load-file (expand-file-name
+;; 		     "~/.emacs.d/modules/notmuch.org"
+;; 		     user-emacs-directory))
+
+;; helm: Indescribably awesome
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/helm.org"
+		      user-emacs-directory))
+
+;; company: Auto complete anything, anywhere
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/company.org"
+		      user-emacs-directory))
+
+;; yasnippet: Snippet and be done with it
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/yasnippet.org"
+		      user-emacs-directory))
+;; evil: Hopeless dependency on Vi bindings
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/evil.org"
+		      user-emacs-directory))
+
+;; flyspell: Get the computer proof reading
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/flyspell.org"
+		      user-emacs-directory))
+
+
+;; flycheck: Get the computer proof reading
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/flycheck.org"
+		      user-emacs-directory))
+
+;; activities/programming: Minor modes and tweaks
+;; ------------------------------------------------------------------------
+(org-babel-load-file (expand-file-name
+		      "~/.emacs.d/modules/activities/programming.org"
+		      user-emacs-directory))
+
+
+;;; init.el ends here
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("9f9fc38446c384a4e909b7220d15bf0c152849ef42f5b1b97356448612c77953" "1f1b545575c81b967879a5dddc878783e6ebcca764e4916a270f9474215289e5" "c614d2423075491e6b7f38a4b7ea1c68f31764b9b815e35c9741e9490119efc0" default))
+ '(package-selected-packages
+   '(doom-themes anaconda-mode yaml-mode cmake-font-lock flycheck yasnippet use-package org-evil helm company cmake-mode base16-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

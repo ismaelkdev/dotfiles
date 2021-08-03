@@ -1,0 +1,16 @@
+#+TITLE: flyspell: Spell checking in emacs
+#+AUTHOR: Aqeel Akber
+
+* flyspell
+
+=flyspell= provides on the fly spell checking. Works fine out the box
+for me, might rely on your operating system being set up correctly.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flyspell :ensure t
+    :defer t
+    :init
+    (add-hook 'text-mode-hook 'flyspell-mode)
+    (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+    )
+#+END_SRC

@@ -1,0 +1,22 @@
+#+TITLE: Deft and its extensions
+#+AUTHOR: Ismael Khan
+
+
+* Deft
+From discovering org-roam, most of the Deft and Zetteldeft functionality has become obsolete because its nicely
+organized within the org-roam package. Graphing and node linkage as well as searching through notes.
+#+BEGIN_SRC emacs-lisp
+(use-package deft
+  :ensure t
+  :init
+    (setq deft-extensions '("org" "md" "txt")
+          deft-use-filename-as-title t))
+
+(use-package zetteldeft
+  :ensure t
+  :after deft
+  :config (zetteldeft-set-classic-keybindings))
+#+END_SRC
+
+#+RESULTS:
+: t
