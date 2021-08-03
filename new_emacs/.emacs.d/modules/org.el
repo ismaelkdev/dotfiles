@@ -63,23 +63,22 @@
 (use-package org-cliplink :ensure t
 )
 
-;;  (use-package org-roam
-;;        :ensure t
-;;        :hook
-;;        (after-init . org-roam-mode)
-;;        :custom
-;;        (org-roam-directory (file-truename "/home/ik/notes"))
-;;        :bind (("C-c n l" . org-roam-buffer-toggle)
-;;               ("C-c n f" . org-roam-node-find)
-;;               ("C-c n g" . org-roam-graph)
-;;               ("C-c n i" . org-roam-node-insert)
-;;               ("C-c n c" . org-roam-capture)
-;;               ;; Dailies
-;;               ("C-c n j" . org-roam-dailies-capture-today))
-;;        :config
-;;        (org-roam-setup)
-;;        (require 'org-roam-protocol))
-;;        (setq org-roam-v2-ack t)
+(use-package org-roam
+    :ensure t
+    :custom
+    (org-roam-directory (file-truename "/home/ik/org-roam/"))
+    :bind (("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n g" . org-roam-graph)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n c" . org-roam-capture)
+           ;; Dailies
+           ("C-c n j" . org-roam-dailies-capture-today))
+    :config
+    (org-roam-setup)
+    ;; If using org-roam-protocol
+    (require 'org-roam-protocol))
+    (setq org-roam-v2-ack t)
 
 (setq org-agenda-files '("~/gtd/inbox.org"
                           "~/gtd/gtd.org"

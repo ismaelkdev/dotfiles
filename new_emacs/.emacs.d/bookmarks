@@ -8,8 +8,8 @@
  (rear-context-string . "hu 09:00-10:00>\n")
  (position . 1007))
 ("org-capture-last-stored"
- (filename . "~/gtd/inbox.org")
- (front-context-string . "** TODO Watch ST")
- (rear-context-string)
- (position . 9))
+ (filename . "~/org-roam/daily/2021-08-03.org")
+ (front-context-string . "* IT WORKED\nWHAT")
+ (rear-context-string . "tle: 2021-08-03\n")
+ (position . 108))
 )

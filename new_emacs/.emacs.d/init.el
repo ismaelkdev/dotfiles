@@ -85,12 +85,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("0b3aee906629ac7c3bd994914bf252cf92f7a8b0baa6d94cb4dfacbd4068391d" default)))
  '(package-selected-packages
-   (quote
-    (## zetteldeft yasnippet yaml-mode writeroom-mode use-package parsebib org-roam org-evil org-download org-cliplink org-bullets helm flycheck evil-avy doom-themes company cmake-font-lock biblio base16-theme anaconda-mode))))
+   '(emacsql-mysql zetteldeft yasnippet yaml-mode writeroom-mode use-package org-roam-bibtex org-evil org-download org-cliplink org-bullets git-gutter+ flycheck evil-avy emacsql-sqlite3 doom-themes company cmake-font-lock base16-theme anaconda-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
