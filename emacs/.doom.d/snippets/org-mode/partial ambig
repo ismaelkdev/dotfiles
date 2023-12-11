@@ -1,4 +1,0 @@
-# key: par
-# name: partial ambig
-# --
-\frac{\partial{$1}}{\partial{$2}}

@@ -1,9 +1,0 @@
-#+AUTHOR: Ismael Khan
-#+T
-
-* Evil Mode
-#+BEGIN_SRC emacs-lisp
-    (require 'evil)
-    (evil-mode 1)
-#+END_SRC
-pkJKJ

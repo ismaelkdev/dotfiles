@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: KaTeX inbedding in LaTeX (display)
-# key: Mk
-# --
-{{<katex "display">}}
-$1
-{{</katex>}}

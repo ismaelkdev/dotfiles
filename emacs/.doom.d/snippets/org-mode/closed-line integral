@@ -1,4 +1,0 @@
-# key: oi
-# name: closed-line integral
-# --
-\oint_{$1} $2 \; d$3
