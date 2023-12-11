@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: cospin
-# key: cospin
-# --
-\cos \left(\frac{$1 \pi x}{L} \right)

@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: derivative
-# key: der
-# --
-\frac{d$1}{d$2}

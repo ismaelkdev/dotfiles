@@ -1,4 +1,0 @@
-# key: oii
-# name: closed double integral
-# --
-\oiint\limits{$1} $2 \; d$3

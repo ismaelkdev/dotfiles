@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: Proof environment (under proof)
-# key: prf
-# --
-\begin{proof}
-$1
-\end{proof}
